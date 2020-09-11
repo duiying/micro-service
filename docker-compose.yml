@@ -14,7 +14,7 @@ services:
       - redis:redis
       - passport-service:passport-service
     volumes:
-      - /data/www/backend-access:/data/www/
+      - /data/www/backend-access:/data/www
     ports:
       - "9501:9501"
     tty: true
@@ -30,7 +30,7 @@ services:
       - mysql:mysql
       - redis:redis
     volumes:
-      - /data/www/passport-service:/data/www/
+      - /data/www/passport-service:/data/www
     ports:
       - "9510:9510"
     tty: true
