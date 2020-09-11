@@ -45,7 +45,7 @@ services:
       - "6379:6379"
     volumes:
       - /data/redis:/data
-    command: redis-server --requirepass WYX*#wyx123
+    command: redis-server --requirepass WYX*wyx123
 
   mysql:
     container_name: mysql
@@ -58,7 +58,7 @@ services:
     volumes:
       - /data/mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=wyx*#WYX123
+      - MYSQL_ROOT_PASSWORD=wyx*WYX123
 
   nginx:
     container_name: nginx
