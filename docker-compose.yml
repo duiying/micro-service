@@ -59,3 +59,16 @@ services:
       - /data/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=wyx*#WYX123
+
+  nginx:
+    container_name: nginx
+    image: daocloud.io/library/nginx:1.13.1
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-access
+      - passport-service
+    links:
+      - backend-access
+      - passport-service
