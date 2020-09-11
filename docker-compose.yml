@@ -1,0 +1,61 @@
+version: "3"
+
+services:
+  backend-access:
+    container_name: "backend-access"
+    image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
+    command: "php bin/hyperf.php start"
+    depends_on:
+      - mysql
+      - redis
+      - passport-service
+    links:
+      - mysql:mysql
+      - redis:redis
+      - passport-service:passport-service
+    volumes:
+      - /data/www/backend-access:/data/www/
+    ports:
+      - "9501:9501"
+    tty: true
+
+  passport-service:
+    container_name: "passport-service"
+    image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
+    command: "php bin/hyperf.php start"
+    depends_on:
+      - mysql
+      - redis
+    links:
+      - mysql:mysql
+      - redis:redis
+    volumes:
+      - /data/www/passport-service:/data/www/
+    ports:
+      - "9510:9510"
+    tty: true
+
+  redis:
+    container_name: redis
+    image: daocloud.io/library/redis
+    restart: always
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    volumes:
+      - /data/redis:/data
+    command: redis-server --requirepass WYX*#wyx123
+
+  mysql:
+    container_name: mysql
+    image: daocloud.io/library/mysql:5.6
+    restart: always
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=wyx*#WYX123
