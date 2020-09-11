@@ -5,7 +5,6 @@
 
 ### 组成
 
-| Description | Project |  
 | :--- | :---- |
 | 后台接入层 | [backend-access](https://github.com/duiying/backend-access) | 
 | 权限服务 | [passport-service](https://github.com/duiying/passport-service) | 
