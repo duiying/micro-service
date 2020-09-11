@@ -66,6 +66,8 @@ services:
     restart: always
     ports:
       - "80:80"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
     depends_on:
       - backend-access
       - passport-service
