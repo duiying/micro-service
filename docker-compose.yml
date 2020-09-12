@@ -6,13 +6,9 @@ services:
     image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
     command: "php bin/hyperf.php start"
     depends_on:
-      - mysql
-      - redis
-      - passport-service
+      - nginx
     links:
-      - mysql:mysql
-      - redis:redis
-      - passport-service:passport-service
+      - nginx:nginx
     volumes:
       - /data/www/backend-access:/data/www
     ports:
@@ -68,9 +64,3 @@ services:
       - "80:80"
     volumes:
       - ./conf.d:/etc/nginx/conf.d
-    depends_on:
-      - backend-access
-      - passport-service
-    links:
-      - backend-access
-      - passport-service
