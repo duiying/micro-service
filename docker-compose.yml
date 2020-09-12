@@ -6,9 +6,9 @@ services:
     image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
     command: "php bin/hyperf.php start"
     depends_on:
-      - nginx
+      - passport-service
     links:
-      - nginx:nginx
+      - passport-service:passport-service
     volumes:
       - /data/www/backend-access:/data/www
     ports:
