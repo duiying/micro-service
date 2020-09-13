@@ -13,3 +13,18 @@
 ### 预览
 
 ### 部署
+
+```sh
+# 下载
+git clone https://github.com/duiying/Learner.git
+# 初始化
+sh init.sh
+# 容器编排
+docker-compose up -d
+# hosts 新增下面两行
+127.0.0.1 api.admin.learner.pythonup.cn
+127.0.0.1 admin.learner.pythonup.cn
+# 导入 SQL
+# 访问
+http://admin.learner.pythonup.cn
+```

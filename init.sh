@@ -3,9 +3,9 @@
 # 创建项目目录
 mkdir -p /data/www
 
-# 克隆项目
-cd /data/www && git clone https://github.com/duiying/backend-access
-cd /data/www && git clone https://github.com/duiying/passport-service
+# 下载项目
+cd /data/www && git clone https://github.com/duiying/backend-access && composer install
+cd /data/www && git clone https://github.com/duiying/passport-service && composer install
 
 
 
