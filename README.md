@@ -42,4 +42,4 @@ docker-compose up -d
 ```
 6、导入 SQL（sql.sql）  
 
-7、访问：http://admin.learner.pythonup.cn（邮箱：admin@gmail.com 密码：123456）
+7、访问：http://admin.learner.pythonup.cn （邮箱：admin@gmail.com 密码：123456）
