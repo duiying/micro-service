@@ -24,7 +24,7 @@ docker-compose up -d
 # hosts 新增下面两行
 127.0.0.1 api.admin.learner.pythonup.cn
 127.0.0.1 admin.learner.pythonup.cn
-# 导入 SQL
+# 导入 SQL（sql.sql）
 # 访问
 http://admin.learner.pythonup.cn
 ```
