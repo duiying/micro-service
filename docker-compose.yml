@@ -38,10 +38,10 @@ services:
     expose:
       - "6379"
     ports:
-      - "6379:6379"
+      - "6397:6379"
     volumes:
       - ./redis:/data
-    command: redis-server --requirepass WYX*wyx123
+    command: redis-server --requirepass WYX**wyx123
 
   mysql:
     container_name: mysql
@@ -50,11 +50,11 @@ services:
     expose:
       - "3306"
     ports:
-      - "3306:3306"
+      - "3360:3306"
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=wyx*WYX123
+      - MYSQL_ROOT_PASSWORD=wyx**WYX123
 
   nginx:
     container_name: nginx
