@@ -10,7 +10,7 @@ services:
     links:
       - passport-service:passport-service
     volumes:
-      - /data/www/backend-access:/data/www
+      - ./www/backend-access:/data/www
     ports:
       - "9501:9501"
     tty: true
@@ -26,7 +26,7 @@ services:
       - mysql:mysql
       - redis:redis
     volumes:
-      - /data/www/passport-service:/data/www
+      - ./www/passport-service:/data/www
     ports:
       - "9510:9510"
     tty: true
@@ -40,7 +40,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /data/redis:/data
+      - ./redis:/data
     command: redis-server --requirepass WYX*wyx123
 
   mysql:
@@ -52,7 +52,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /data/mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=wyx*WYX123
 
