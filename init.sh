@@ -32,14 +32,3 @@ cd ..
 # .env
 cd backend-access && cp .env.example .env && cd ..
 cd passport-service && cp .env.example .env && cd ..
-
-if [ -d backend-access ]; then
-	cd backend-access
-	composer install
-	cd ..
-fi
-
-if [ -d passport-service ]; then
-	cd passport-service
-	composer install
-fi

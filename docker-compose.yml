@@ -4,7 +4,7 @@ services:
   backend-access:
     container_name: "backend-access"
     image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
-    command: "php bin/hyperf.php start"
+    # command: "php bin/hyperf.php start"
     depends_on:
       - passport-service
     links:
@@ -18,7 +18,7 @@ services:
   passport-service:
     container_name: "passport-service"
     image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
-    command: "php bin/hyperf.php start"
+    # command: "php bin/hyperf.php start"
     depends_on:
       - mysql
       - redis
