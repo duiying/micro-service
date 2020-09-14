@@ -134,7 +134,6 @@ INSERT INTO `t_passport_permission` VALUES (19, '角色删除', '/v1/role/update
 INSERT INTO `t_passport_permission` VALUES (20, '角色', '/view/role/search;/v1/role/search;/view/role/create;/v1/role/create;/view/role/update;/v1/role/update;/v1/role/find;/v1/role/update_field;/v1/permission/select;/v1/menu/select', 1, 22, '2020-09-11 14:33:22', '2020-09-09 10:15:25');
 
 -- 管理员基础数据
-INSERT INTO `t_passport_user` VALUES (1, 'admin', 'admin@gmail.com', '18311413962', '技术负责人', '8e306fa6f8966e4cb9fd523868ec4698', '2020-09-06 12:54:51', '2020-08-27 17:08:08', 1, 99, 1);
-
+INSERT INTO `t_passport_user` VALUES (1, 'admin', 'admin@gmail.com', '18311413962', '技术负责人', '8e306fa6f8966e4cb9fd523868ec4698', 1, 1, 1, '2020-09-06 12:54:51', '2020-08-27 17:08:08');
 -- 用户角色基础数据
 INSERT INTO `t_passport_user_role` VALUES (1, 1, 1, 1, '2020-09-06 10:26:31', '2020-09-06 08:37:29');
