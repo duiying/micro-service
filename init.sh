@@ -29,6 +29,10 @@ fi
 # 退出 passport-service 目录
 cd ..
 
+# .env
+cd backend-access && cp .env.example .env && cd ..
+cd passport-service && cp .env.example .env && cd ..
+
 if [ -d backend-access ]; then
 	cd backend-access
 	composer install
