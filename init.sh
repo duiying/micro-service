@@ -12,16 +12,30 @@ cd www
 if [ -d backend-access ]; then
 	cd backend-access
 	git pull origin master
-	composer install
 else
-	git clone https://github.com/duiying/backend-access && cd backend-access && composer install
+	git clone https://github.com/duiying/backend-access && cd backend-access
 fi
+
+# 退出 backend-access 目录
+cd ..
 
 if [ -d passport-service ]; then
 	cd passport-service
         git pull origin master
-        composer install
 else
-	git clone https://github.com/duiying/passport-service && cd passport-service && composer install
+	git clone https://github.com/duiying/passport-service && cd passport-service
 fi
 
+# 退出 passport-service 目录
+cd ..
+
+if [ -d backend-access ]; then
+	cd backend-access
+	composer install
+	cd ..
+fi
+
+if [ -d passport-service ]; then
+	cd passport-service
+	composer install
+fi
