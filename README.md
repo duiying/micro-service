@@ -12,7 +12,9 @@
 
 ### 架构图
 
+整体架构：  
 
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/micro-service.png" width="500"></div>   
 
 ### 部署
 
