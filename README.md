@@ -56,7 +56,7 @@ $ composer --version
 Composer version 1.10.6 2020-05-06 10:28:10
 ```
 
-2、端口检查：确保你的机器上的 9501（backend-access）、9510（passport-service）、6397（Redis 容器）、3360（MySQL 容器）未被占用。 
+2、端口检查：确保你的机器上的 80（Nginx 容器）、9501（backend-access）、9510（passport-service）、6397（Redis 容器）、3360（MySQL 容器）未被占用。 
 
 3、下载
 
