@@ -13,7 +13,7 @@ if [ -d backend-access ]; then
 	cd backend-access
 	git pull origin master
 else
-	git clone https://github.com/duiying/backend-access && cd backend-access
+	git clone https://github.com/duiying/backend-access && cd backend-access && composer update
 fi
 
 # 退出 backend-access 目录
@@ -23,7 +23,7 @@ if [ -d passport-service ]; then
 	cd passport-service
         git pull origin master
 else
-	git clone https://github.com/duiying/passport-service && cd passport-service
+	git clone https://github.com/duiying/passport-service && cd passport-service && composer update
 fi
 
 # 退出 passport-service 目录
