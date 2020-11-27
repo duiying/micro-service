@@ -10,6 +10,10 @@
 | 后台接入层【Hyperf】 | [backend-access](https://github.com/duiying/backend-access) | 
 | 权限服务 【Hyperf】| [passport-service](https://github.com/duiying/passport-service) | 
 
+### 架构图
+
+
+
 ### 部署
 
 1、环境检查：首先确保你的机器上已经装好 Swoole、PHP、Docker、Composer，比如我的 MacBook 的环境如下：  

@@ -102,11 +102,11 @@ CREATE TABLE `t_passport_user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员角色表';
 
 -- 菜单基础数据
-INSERT INTO `t_passport_menu` VALUES (1, 0, '权限管理', 'fa fa-tasks', '', 1, '2020-08-31 21:12:15', '2020-08-31 21:11:51', 99);
-INSERT INTO `t_passport_menu` VALUES (2, 1, '管理员', 'fa fa-users', '/view/user/search', 1, '2020-09-08 10:20:42', '2020-08-31 21:21:10', 99);
-INSERT INTO `t_passport_menu` VALUES (3, 1, '角色', 'fa fa-user', '/view/role/search', 1, '2020-08-31 21:28:26', '2020-08-31 21:21:53', 99);
-INSERT INTO `t_passport_menu` VALUES (4, 1, '权限', 'fa fa-ban', '/view/permission/search', 1, '2020-09-02 12:28:02', '2020-08-31 21:23:09', 99);
-INSERT INTO `t_passport_menu` VALUES (5, 1, '菜单', 'fa fa-bars', '/view/menu/search', 1, '2020-09-01 12:09:49', '2020-09-01 12:09:49', 99);
+INSERT INTO `t_passport_menu` VALUES (1, 0, '权限管理', 'fa fa-tasks', '', 1, 99, '2020-08-31 21:12:15', '2020-08-31 21:11:51');
+INSERT INTO `t_passport_menu` VALUES (2, 1, '管理员', 'fa fa-users', '/view/user/search', 1, 99, '2020-09-08 10:20:42', '2020-08-31 21:21:10');
+INSERT INTO `t_passport_menu` VALUES (3, 1, '角色', 'fa fa-user', '/view/role/search', 1, 99, '2020-08-31 21:28:26', '2020-08-31 21:21:53');
+INSERT INTO `t_passport_menu` VALUES (4, 1, '权限', 'fa fa-ban', '/view/permission/search', 1, 99, '2020-09-02 12:28:02', '2020-08-31 21:23:09');
+INSERT INTO `t_passport_menu` VALUES (5, 1, '菜单', 'fa fa-bars', '/view/menu/search', 1, 99, '2020-09-01 12:09:49', '2020-09-01 12:09:49');
 
 -- 角色基础数据
 INSERT INTO `t_passport_role` VALUES (1, '超级管理员', 1, 1, 1, '2020-09-04 14:26:32', '2020-09-02 19:45:21');
