@@ -79,6 +79,6 @@ docker-compose up -d
 127.0.0.1 admin.micro.service.com 
 127.0.0.1 api.micro.service.com
 ```
-6、通过宿主机的 3360 端口（宿主机的 3360 端口映射 MySQL 容器暴露的 3306 端口）连接 MySQL 容器（可以使用 Navicat 等客户端工具），导入 SQL（sql.sql）。    
+6、通过宿主机的 3360 端口（宿主机的 3360 端口映射 MySQL 容器暴露的 3306 端口）连接 MySQL 容器，导入 SQL（sql.sql）。（**如何连接**？可以使用 Navicat 等客户端工具，host 为 127.0.0.1，port 为 3360，用户名为 root，密码为 wyx**WYX123）    
 
 7、访问：http://admin.micro.service.com （邮箱：admin@gmail.com 密码：123456）
