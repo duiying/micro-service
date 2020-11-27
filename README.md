@@ -74,7 +74,7 @@ git clone https://github.com/duiying/micro-service
 docker-compose up -d
 ```
 
-6、hosts 新增下面两行
+6、hosts 新增下面内容
 ```sh
 127.0.0.1 admin.micro.service.com 
 127.0.0.1 api.micro.service.com
