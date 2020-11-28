@@ -10,9 +10,9 @@
 | 后台接入层【Hyperf】 | [backend-access](https://github.com/duiying/backend-access) | 
 | 权限服务 【Hyperf】| [passport-service](https://github.com/duiying/passport-service) | 
 
-### 架构图
+### 整体架构
 
-整体架构：  
+架构图：  
 
 <div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/micro-service.png" width="500"></div>   
 
