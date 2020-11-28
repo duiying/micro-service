@@ -27,6 +27,9 @@
 
 <div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/micro-service-docker.png" width="500"></div>   
 
+以登录流程为例，分析系统的整个处理流程：  
+
+
 
 ### 如何部署
 
