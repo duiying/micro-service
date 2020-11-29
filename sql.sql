@@ -32,7 +32,7 @@ CREATE TABLE `t_passport_user` (
   KEY `idx_name` (`name`),
   KEY `idx_email` (`email`),
   KEY `idx_mobile` (`mobile`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
 
 DROP TABLE IF EXISTS `t_passport_menu`;
 CREATE TABLE `t_passport_menu` (
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `t_passport_permission`;
 CREATE TABLE `t_passport_permission` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `name` varchar(50) NOT NULL DEFAULT '' COMMENT '权限名称',
-  `url` varchar(2000) NOT NULL DEFAULT '' COMMENT '路由（多个之间用英文逗号隔开）',
+  `url` varchar(2000) NOT NULL DEFAULT '' COMMENT '路由（多个之间用英文分号隔开）',
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 {-1：删除；1：正常；}',
   `sort` int(10) NOT NULL DEFAULT '99' COMMENT '排序（正序）',
   `mtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
@@ -91,7 +91,7 @@ CREATE TABLE `t_passport_role_menu` (
 DROP TABLE IF EXISTS `t_passport_user_role`;
 CREATE TABLE `t_passport_user_role` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `user_id` int(10) unsigned NOT NULL COMMENT '管理员ID',
+  `user_id` int(10) unsigned NOT NULL COMMENT '用户ID',
   `role_id` int(10) unsigned NOT NULL COMMENT '角色ID',
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 {-1：删除；1：正常；}',
   `mtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
@@ -99,7 +99,7 @@ CREATE TABLE `t_passport_user_role` (
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`),
   KEY `idx_role_id` (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员角色表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户角色表';
 
 -- 菜单基础数据
 INSERT INTO `t_passport_menu` VALUES (1, 0, '权限管理', 'fa fa-tasks', '', 1, 99, '2020-08-31 21:12:15', '2020-08-31 21:11:51');
