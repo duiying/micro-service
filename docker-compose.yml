@@ -20,19 +20,19 @@ services:
     image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
     command: "php bin/hyperf.php start"
     depends_on:
-      - mysql
-      - redis
+      - micro-service-mysql
+      - micro-service-redis
     links:
-      - mysql:mysql
-      - redis:redis
+      - mysql:micro-service-mysql
+      - redis:micro-service-redis
     volumes:
       - ./www/passport-service:/data/www
     ports:
       - "9510:9510"
     tty: true
 
-  redis:
-    container_name: redis
+  micro-service-redis:
+    container_name: micro-service-redis
     image: daocloud.io/library/redis
     restart: always
     expose:
@@ -43,8 +43,8 @@ services:
       - ./redis:/data
     command: redis-server --requirepass WYX**wyx123
 
-  mysql:
-    container_name: mysql
+  micro-service-mysql:
+    container_name: micro-service-mysql
     image: daocloud.io/library/mysql:5.6
     restart: always
     expose:
@@ -56,8 +56,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=wyx**WYX123
 
-  nginx:
-    container_name: nginx
+  micro-service-nginx:
+    container_name: micro-service-nginx
     image: daocloud.io/library/nginx:1.13.1
     restart: always
     ports:
