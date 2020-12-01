@@ -23,8 +23,8 @@ services:
       - micro-service-mysql
       - micro-service-redis
     links:
-      - mysql:micro-service-mysql
-      - redis:micro-service-redis
+      - micro-service-mysql:micro-service-mysql
+      - micro-service-redis:micro-service-redis
     volumes:
       - ./www/passport-service:/data/www
     ports:
