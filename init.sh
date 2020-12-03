@@ -41,6 +41,7 @@ echo "========================= content-service 下载结束 =========+=========
 # .env
 cd backend-access && cp .env.example .env && cd ..
 cd passport-service && cp .env.example .env && cd ..
+cd content-service && cp .env.example .env && cd ..
 
 # 安装 Composer 包（需要启动两个 Hyperf 容器，通过目录映射，来为项目安装所需要的 Composer 包）
 echo "========================= bacend-access 安装包开始 ================================================================"
