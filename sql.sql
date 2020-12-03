@@ -1,3 +1,5 @@
+# passport 数据库
+
 CREATE DATABASE passport DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
 
 use passport;
@@ -137,3 +139,21 @@ INSERT INTO `t_passport_permission` VALUES (20, '角色', '/view/role/search;/v1
 INSERT INTO `t_passport_user` VALUES (1, 'admin', 'admin@gmail.com', '18311413962', '技术负责人', '8e306fa6f8966e4cb9fd523868ec4698', 1, 1, 1, '2020-09-06 12:54:51', '2020-08-27 17:08:08');
 -- 用户角色基础数据
 INSERT INTO `t_passport_user_role` VALUES (1, 1, 1, 1, '2020-09-06 10:26:31', '2020-09-06 08:37:29');
+
+# content 数据库
+
+CREATE DATABASE content DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+
+use content;
+
+DROP TABLE IF EXISTS `t_content_article`;
+CREATE TABLE `t_content_article` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `title` varchar(255) NOT NULL DEFAULT '' COMMENT '文章标题',
+  `content` text NOT NULL default '' comment '文章内容',
+  `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '状态 {-1：删除；1：正常；}',
+  `sort` int(10) NOT NULL DEFAULT '99' COMMENT '排序（正序）',
+  `mtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='文章表';
