@@ -7,8 +7,10 @@ services:
     command: "php bin/hyperf.php start"
     depends_on:
       - passport-service
+      - content-service
     links:
       - passport-service:passport-service
+      - content-service:content-service
     volumes:
       - ./www/backend-access:/data/www
     ports:
@@ -29,6 +31,22 @@ services:
       - ./www/passport-service:/data/www
     ports:
       - "9510:9510"
+    tty: true
+
+  content-service:
+    container_name: "content-service"
+    image: registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
+    command: "php bin/hyperf.php start"
+    depends_on:
+      - micro-service-mysql
+      - micro-service-redis
+    links:
+      - micro-service-mysql:micro-service-mysql
+      - micro-service-redis:micro-service-redis
+    volumes:
+      - ./www/content-service:/data/www
+    ports:
+      - "9511:9511"
     tty: true
 
   micro-service-redis:
