@@ -87,7 +87,7 @@ services:
 
   micro-service-elasticsearch:
     container_name: micro-service-elasticsearch
-    image: daocloud.io/library/elasticsearch:7.7.1
+    image: registry.cn-beijing.aliyuncs.com/duiying/elasticsearch-ik:1.0
     restart: always
     ports:
       - "9200:9200"
