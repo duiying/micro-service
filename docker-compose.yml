@@ -40,9 +40,11 @@ services:
     depends_on:
       - micro-service-mysql
       - micro-service-redis
+      - micro-service-elasticsearch
     links:
       - micro-service-mysql:micro-service-mysql
       - micro-service-redis:micro-service-redis
+      - micro-service-elasticsearch:micro-service-elasticsearch
     volumes:
       - ./www/content-service:/data/www
     ports:
@@ -82,3 +84,24 @@ services:
       - "80:80"
     volumes:
       - ./conf.d:/etc/nginx/conf.d
+
+  micro-service-elasticsearch:
+    container_name: micro-service-elasticsearch
+    image: daocloud.io/library/elasticsearch:7.7.1
+    restart: always
+    ports:
+      - "9200:9200"
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+    environment:
+      - node.name=es01
+      - cluster.name=docker-cluster
+      - cluster.initial_master_nodes=es01
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.monitoring.enabled=false
+      - xpack.watcher.enabled=false
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
