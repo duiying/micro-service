@@ -91,6 +91,7 @@ services:
     restart: always
     ports:
       - "9200:9200"
+      - "9300:9300"
     volumes:
       - ./elasticsearch/data:/usr/share/elasticsearch/data
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
@@ -98,7 +99,6 @@ services:
     environment:
       - node.name=es01
       - cluster.name=docker-cluster
-      - cluster.initial_master_nodes=es01
       - discovery.type=single-node
       - xpack.security.enabled=false
       - xpack.monitoring.enabled=false
