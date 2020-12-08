@@ -9,6 +9,7 @@
 | :--- | :---- |
 | 后台接入层【Hyperf】 | [backend-access](https://github.com/duiying/backend-access) | 
 | 权限服务 【Hyperf】| [passport-service](https://github.com/duiying/passport-service) | 
+| 内容服务 【Hyperf】| [content-service](https://github.com/duiying/content-service) | 
 
 ### 整体架构
 
