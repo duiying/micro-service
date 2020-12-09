@@ -136,6 +136,11 @@ INSERT INTO `t_passport_permission` VALUES (17, '角色创建', '/view/role/crea
 INSERT INTO `t_passport_permission` VALUES (18, '角色更新', '/view/role/update;/v1/role/update;/v1/role/find;/v1/permission/select;/v1/menu/select', 1, 20, '2020-09-11 14:33:15', '2020-09-09 10:05:13');
 INSERT INTO `t_passport_permission` VALUES (19, '角色删除', '/v1/role/update_field', 1, 21, '2020-09-11 14:33:19', '2020-09-09 10:05:37');
 INSERT INTO `t_passport_permission` VALUES (20, '角色', '/view/role/search;/v1/role/search;/view/role/create;/v1/role/create;/view/role/update;/v1/role/update;/v1/role/find;/v1/role/update_field;/v1/permission/select;/v1/menu/select', 1, 22, '2020-09-11 14:33:22', '2020-09-09 10:15:25');
+INSERT INTO `t_passport_permission` VALUES (21, '文章列表', '/view/article/search;/v1/article/search', 1, 23, '2020-12-09 10:36:16', '2020-12-09 10:36:16');
+INSERT INTO `t_passport_permission` VALUES (22, '文章创建', '/view/article/create;/v1/article/create', 1, 24, '2020-12-09 10:37:13', '2020-12-09 10:37:13');
+INSERT INTO `t_passport_permission` VALUES (23, '文章更新', '/view/article/update;/v1/article/update;/v1/article/find', 1, 25, '2020-12-09 10:38:34', '2020-12-09 10:38:34');
+INSERT INTO `t_passport_permission` VALUES (24, '文章删除', '/v1/article/update_field', 1, 26, '2020-12-09 10:39:14', '2020-12-09 10:39:14');
+INSERT INTO `t_passport_permission` VALUES (25, '文章', '/view/article/search;/v1/article/search;/view/article/create;/v1/article/create;/view/article/update;/v1/article/update;/v1/article/find;/v1/article/update_field', 1, 27, '2020-12-09 10:40:49', '2020-12-09 10:40:49');
 
 -- 管理员基础数据
 INSERT INTO `t_passport_user` VALUES (1, 'admin', 'admin@gmail.com', '18311413962', '技术负责人', '8e306fa6f8966e4cb9fd523868ec4698', 1, 1, 1, '2020-09-06 12:54:51', '2020-08-27 17:08:08');
