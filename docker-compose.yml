@@ -41,10 +41,12 @@ services:
       - micro-service-mysql
       - micro-service-redis
       - micro-service-elasticsearch
+      - micro-service-rabbitmq
     links:
       - micro-service-mysql:micro-service-mysql
       - micro-service-redis:micro-service-redis
       - micro-service-elasticsearch:micro-service-elasticsearch
+      - micro-service-rabbitmq:micro-service-rabbitmq
     volumes:
       - ./www/content-service:/data/www
     ports:
@@ -105,3 +107,17 @@ services:
       - xpack.watcher.enabled=false
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+  micro-service-rabbitmq:
+    container_name: micro-service-rabbitmq
+    image: daocloud.io/library/rabbitmq:3.7.3-management
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=micro_service_admin
+      - RABBITMQ_DEFAULT_PASS=123456
+      - RABBITMQ_DEFAULT_VHOST=/
