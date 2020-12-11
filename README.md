@@ -8,7 +8,7 @@
 
 - 前后端分离，UI 基于 AdminLTE3，后端框架使用 Hyperf
 - 基于 Redis 实现的 token 令牌机制
-- 基于 Guzzle 封装的 HTTP RPC 组件、MySQL CRUD 组件、重试组件等
+- 基于 Guzzle 封装的 HTTP RPC 组件、重试组件、MySQL CRUD 组件等
 - 基于 ElasticSearch 的搜索功能
 - 通过 RabbitMQ 将 MySQL 中的数据同步到 ElasticSearch
 - 容器化部署，初始化脚本
