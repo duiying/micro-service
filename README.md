@@ -34,7 +34,7 @@
 - backend-access 作为后台接入层，主要有两个作用：1、渲染前端页面；2、后台 API 的统一入口。
 - admin.micro.service.com api.micro.service.com 这两个域名都指向 backend-access 项目，两个域名是为了区分客户端请求是「渲染视图」还是「前端调用 API 接口」。
 - backend-access 通过 HTTP RPC 的方式和其他服务（如后台权限服务 passport-service）完成通信。
-- 为了方便测试，给 passport-service、content-service 也各自分配了域名：passport.micro.service.com、content.micro.service.com，可以通过该域名直接访问服务提供的 API 接口。  
+- 为了方便测试，给 passport-service、content-service 也各自分配了域名：passport.micro.service.com、content.micro.service.com，可以通过域名直接访问对应服务提供的 API 接口。  
 
 **容器**：  
 
