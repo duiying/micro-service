@@ -40,6 +40,6 @@
 
 <div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/docker-model.png" width="700"></div>   
 
-### 如何部署
+### 部署
 
 [如何部署](./docs/如何部署.md)
