@@ -121,3 +121,21 @@ services:
       - RABBITMQ_DEFAULT_USER=micro_service_admin
       - RABBITMQ_DEFAULT_PASS=123456
       - RABBITMQ_DEFAULT_VHOST=/
+
+  micro-service-zipkin:
+    container_name: micro-service-zipkin
+    image: openzipkin/zipkin:latest
+    restart: always
+    ports:
+      - 9411:9411
+    depends_on:
+      - micro-service-mysql
+    links:
+      - micro-service-mysql:micro-service-mysql
+    environment:
+      - STORAGE_TYPE=mysql
+      - MYSQL_DB=zipkin
+      - MYSQL_USER=root
+      - MYSQL_PASS=wyx**WYX123
+      - MYSQL_HOST=micro-service-mysql
+      - MYSQL_TCP_PORT=3306
