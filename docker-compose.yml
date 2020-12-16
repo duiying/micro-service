@@ -8,9 +8,11 @@ services:
     depends_on:
       - passport-service
       - content-service
+      - micro-service-zipkin
     links:
       - passport-service:passport-service
       - content-service:content-service
+      - micro-service-zipkin:micro-service-zipkin
     volumes:
       - ./www/backend-access:/data/www
     ports:
@@ -24,9 +26,11 @@ services:
     depends_on:
       - micro-service-mysql
       - micro-service-redis
+      - micro-service-zipkin
     links:
       - micro-service-mysql:micro-service-mysql
       - micro-service-redis:micro-service-redis
+      - micro-service-zipkin:micro-service-zipkin
     volumes:
       - ./www/passport-service:/data/www
     ports:
@@ -42,11 +46,13 @@ services:
       - micro-service-redis
       - micro-service-elasticsearch
       - micro-service-rabbitmq
+      - micro-service-zipkin
     links:
       - micro-service-mysql:micro-service-mysql
       - micro-service-redis:micro-service-redis
       - micro-service-elasticsearch:micro-service-elasticsearch
       - micro-service-rabbitmq:micro-service-rabbitmq
+      - micro-service-zipkin:micro-service-zipkin
     volumes:
       - ./www/content-service:/data/www
     ports:
