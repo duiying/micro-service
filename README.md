@@ -49,21 +49,21 @@
 
 访问：http://zipkin.micro.service.com/ ，可以看到 Zipkin 的首页。  
 
-<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-index.png" width="500"></div>   
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-index.png" width="700"></div>   
 
 我们可以选择 serviceName 为 backend-access，表示对接入层 backend-access 作调用链追踪。  
 
-<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-service-select.png" width="500"></div>   
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-service-select.png" width="700"></div>   
 
 此时，我访问内容管理下的文章，我们对开始时间倒序，观察该请求。  
 
-<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-trace.png" width="500"></div>   
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-trace.png" width="700"></div>   
 
 可以发现该请求，从 backend-access（即接入层）开始，一共经历了 backend-access、content-service、passport-service 三个项目，总共耗时 35.854ms。  
 
 我们点击 SHOW，可以看到详细的调用链。  
 
-<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-trace-detail.png" width="500"></div>   
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-trace-detail.png" width="700"></div>   
 
 该请求总共经历如下过程：  
 
