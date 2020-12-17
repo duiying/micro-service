@@ -39,7 +39,7 @@
 
 **容器**：  
 
-<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/docker-model.png" width="700"></div>   
+<div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/micro-service-docker.png" width="700"></div>   
 
 ### 部署
 
