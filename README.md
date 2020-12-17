@@ -55,7 +55,7 @@
 
 <div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-service-select.png" width="700"></div>   
 
-此时，我访问内容管理下的文章，我们对开始时间倒序，观察该请求。  
+此时访问内容管理下的文章，我们对开始时间倒序，观察该请求。  
 
 <div align=center><img src="https://raw.githubusercontent.com/duiying/micro-service/master/img/zipkin-trace.png" width="700"></div>   
 
