@@ -75,7 +75,7 @@
 
 4、在接入层拿到文章相关数据后，进行最后的前端页面渲染工作  
 
-如果在 backend-access 中看不到对 Guzzle 的跟踪怎么办？（有可能会遇到这种情况）  
+**有可能会遇到这种情况**：如果在 backend-access 中看不到对 Guzzle 的跟踪怎么办？  
 
 ```sh
 # 进入到 backend-access 容器
