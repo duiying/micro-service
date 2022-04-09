@@ -48,21 +48,21 @@ echo "========================= bacend-access 安装包开始 ==================
 docker run --name bacend-access-package-tool \
 -v `pwd`/backend-access:/data/www -i --entrypoint /bin/sh -d \
 registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
-docker exec -i bacend-access-package-tool bash -c 'composer update'
+docker exec -i bacend-access-package-tool bash -c 'composer install'
 echo "========================= bacend-access 安装包结束 ================================================================"
 
 echo "========================= passport-service 安装包开始 ============================================================="
 docker run --name passport-service-package-tool \
 -v `pwd`/passport-service:/data/www -i --entrypoint /bin/sh -d \
 registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
-docker exec -i passport-service-package-tool bash -c 'composer update'
+docker exec -i passport-service-package-tool bash -c 'composer install'
 echo "========================= passport-service 安装包结束 ============================================================="
 
 echo "========================= content-service 安装包开始 =========+===================================================="
 docker run --name content-service-package-tool \
 -v `pwd`/content-service:/data/www -i --entrypoint /bin/sh -d \
 registry.cn-beijing.aliyuncs.com/duiying/hyperf:1.0
-docker exec -i content-service-package-tool bash -c 'composer update'
+docker exec -i content-service-package-tool bash -c 'composer install'
 echo "========================= content-service 安装包结束 =============================================================="
 
 # 安装完 Composer 包，负责安装 Composer 包的容器的任务完成，需要删除掉这些容器
